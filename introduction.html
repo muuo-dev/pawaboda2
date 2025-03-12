@@ -3,24 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduction - PawaBoda</title>
+    <title>PawaBoda Documentation</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .developer-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+        .developer {
+            text-align: center;
+            max-width: 200px;
+        }
+        .developer img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+        .developer img:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <nav>
         <a href="index.html">Home</a>
+        <a href="introduction.html">Introduction</a>
         <a href="features.html">Features</a>
-        <a href="tech-stack.html">Technology Stack</a>
         <a href="installation.html">Installation</a>
-        <a href="api.html">API Documentation</a>
-        <a href="comparison.html">Why PawaBoda?</a>
+        <a href="why-pawaboda.html">Why PawaBoda?</a>
     </nav>
-
-    <div class="content">
-        <h1>Introduction</h1>
-        <p>PawaBoda is a motorbike ride-hailing app that helps customers request rides easily.</p>
+    
+    <div class="content fade-in">
+        <h1>Welcome to PawaBoda Documentation</h1>
+        <p>PawaBoda is a revolutionary motorbike ride-hailing service designed to provide fast, affordable, and reliable transportation for urban commuters.</p>
     </div>
 
-    <script src="script.js"></script>
+    <section id="about" class="fade-in">
+        <h2>About PawaBoda</h2>
+        <p>PawaBoda was founded with the vision of transforming urban mobility through an efficient, safe, and cost-effective motorbike ride-hailing service. By leveraging technology, we bridge the gap between passengers and riders, ensuring seamless and secure transportation solutions.</p>
+        <p>We aim to empower local riders by providing them with more job opportunities while offering a convenient transport alternative for users. With a user-friendly app, real-time ride tracking, and multiple payment options, PawaBoda is redefining the way people commute.</p>
+        <p>Our platform is designed with safety at its core, ensuring that every rider is verified and every journey is monitored. Additionally, we are committed to innovation, constantly improving our services to meet the growing demands of our customers.</p>
+    </section>
+
+    <section id="developers" class="fade-in">
+        <h2>About the Developers</h2>
+        <p>PawaBoda was developed by a dedicated team of IT professionals and software engineers with a passion for technology-driven solutions. Our developers have worked tirelessly to create a seamless and secure platform that enhances urban transport.</p>
+        <div class="developer-container">
+            <div class="developer">
+                <img src="dev1.jpg" alt="Developer 1">
+                <p>Developer 1</p>
+            </div>
+            <div class="developer">
+                <img src="dev2.jpg" alt="Developer 2">
+                <p>Developer 2</p>
+            </div>
+            <div class="developer">
+                <img src="dev3.jpg" alt="Developer 3">
+                <p>Developer 3</p>
+            </div>
+            <div class="developer">
+                <img src="dev4.jpg" alt="Developer 4">
+                <p>Developer 4</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="fade-in">
+        <h2>Contact & Where to Find Us</h2>
+        <p>PawaBoda is currently operational in multiple cities, providing reliable motorbike rides to thousands of users daily.</p>
+        <p>For inquiries, partnerships, or support, reach out to us:</p>
+        <ul>
+            <li>Email: support@pawaboda.com</li>
+            <li>Phone: +254 700 000 000</li>
+            <li>Website: <a href="https://www.pawaboda.com">www.pawaboda.com</a></li>
+            <li>Follow us on social media: <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a></li>
+        </ul>
+        <p>&copy; 2025 PawaBoda. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll(".fade-in").forEach(element => {
+                element.classList.add("visible");
+            });
+        });
+    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
